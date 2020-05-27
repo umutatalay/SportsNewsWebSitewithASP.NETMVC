@@ -1,0 +1,116 @@
+﻿@model USportsNews.Models.Entity.Tbl_Haber
+@{
+    ViewBag.Title = "HaberEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Haber Ekle</h2>
+
+<form class="form-group" method="post">
+    <table class="table table-bordered table-dark">
+        <tr>
+            <td>Haber Kategorisi :</td>
+            <td> @Html.DropDownListFor(m => m.Tbl_Kategori.KategoriID, (List<SelectListItem>)ViewBag.kg)</td>
+        </tr>
+        <tr>
+            <td> Haber Başlığı :</td>
+            <td><input type="text" class="form-control" name="HaberBaslik" value="" /></td>
+        </tr>
+        <tr>
+            <td>Haber Özet :</td>
+
+            <td>
+                <textarea class="form-control" name="HaberOzet"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Haber İçerik</td>
+
+            <td>
+                @*<input type="text" name="HaberIcerik" id="YeniHaber" />*@
+                <textarea class="ckeditor" id="YeniHaber" name="HaberIcerik"> </textarea>
+                @section scripts{
+                    <script>
+                        $(document).ready(function () {
+                            //initialize CKEditor by givin id of textarea
+                            CKEDITOR.replace('YeniHaber');
+                    </script>
+                }
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>Haber Görsel </td>
+            <td>
+                <input type="text" class="form-control" name="HaberGorsel" value="" />
+                <input type="file" name="yuklenecekresim" id="fileid" value="" />
+            </td>
+
+        </tr>
+        <tr>
+            <td> Haber Slider'e eklensin mi ? </td>
+
+            <td>
+                <input type="radio" id="Evet" name="Slider" value="Evet">
+                <label for="male">Evet</label><br>
+                <input type="radio" id="Hayır" name="Slider" value="Hayır">
+                <label for="female">Hayır</label><br>
+            </td>
+        </tr>
+        <tr>
+            @*// @Html.DropDownListFor(m => m.Tbl_Kategori.KategoriID, (List<SelectListItem>)ViewBag.kg)*@
+            <td> Yazar ID </td>
+            <td><input type="text" class="form-control" name="YazarID" value="@ViewBag.adminid " /></td>
+        </tr>
+        <tr>
+
+
+
+
+
+            <td>Haber Tarih</td>
+            <td>
+                <input type="text" name="HaberTarih" class="form-control" id="tarihgoster" />
+                <p id="tarihgoster"> </p>
+
+                <label name="HaberTarih" id="demo"> </label>
+                <script>
+                    var d = new Date;
+                    var yil = d.getFullYear();
+                    var ay = d.getMonth() + 1;
+                    var gun = d.getDate();
+                    var saat = d.getHours();
+                    var dakika = d.getMinutes();
+                    document.getElementById("tarihgoster").innerHTML = d;
+
+                    document.getElementById("tarihgoster").value = yil + "-" + ay + "-" + gun + " " + saat + ":" + dakika;
+
+                </script>
+
+            </td>
+
+
+
+
+
+
+
+
+        </tr>
+
+        <tr>
+            <td>Haber Etkiket  #</td>
+            <td> <input type="text" name="Etiket" class="form-control" value="" /></td>
+        </tr>
+        <tr>
+
+            <td></td>
+            <td><button class="btn btn-info"> Haberi Yayınla   </button></td>
+            <td></td>
+
+        </tr>
+    </table>
+
+
+</form>

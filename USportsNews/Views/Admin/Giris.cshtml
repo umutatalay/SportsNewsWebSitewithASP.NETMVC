@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Giris";
+    Layout = "~/Views/Shared/Bos.cshtml";
+}
+
+<script>
+    alert("Eposta adresi : umutatalayumut@gmail.com ve sifreyi parola olarak giriniz.");
+</script>
+<br />
+<br />
+<br />
+<div class="container justify-content-center mx-auto">
+
+    <div>
+
+        <form method="post">
+            <table class="table table-bordered table-dark table-borderless">
+               
+                    <tr>
+                        <td style="text-align:center">
+                            <img  src="~/Pictures/logoapt.fw.png" alt="Logo yuklenemedi" />
+                        </td>
+                    </tr>
+                
+                <tr>
+                    <td style="text-align:center"> <h1 style="font-family:sans-serif"><strong> Yazar / Yönetici Girişi</strong></h1> </td>
+                </tr>
+                <tr>
+
+                    <td>  E-Posta Adresi <input type="text" name="eposta" value="E-Posta Adresi" class="form-control" /></td>
+                </tr>
+                <tr>
+
+                    <td>  Parola  <input type="password" name="sifre" value="Sifre" class="form-control" /> </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:center"><button style="position:center" type="submit" class="btn btn-outline-danger">Giris Yap </button></td>
+
+                </tr>
+            </table>
+
+
+
+
+        </form>
+
+    </div>
+
+</div>

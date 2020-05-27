@@ -1,0 +1,46 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Haber>
+@{
+    ViewBag.Title = "HaberListele";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Haber Listele</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        Filtreleme bu kısımda olacak.
+    </div>
+</div>
+
+<table class="table table-bordered table-dark">
+    <tr>
+        <th>
+            Haber Baslık
+        </th>
+        <th>
+            Haber Kategori
+        </th>
+      
+
+    </tr>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <th>
+                    @k.HaberBaslik
+                </th>
+                <td>
+                    @k.KategoriID
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="/Admin/HaberSil/@k.HaberID"> Haberi Sil </a>
+                </td>
+                <td>
+                    <a class="btn btn-success" href="/Admin/HaberiGuncelle/@k.HaberID"> Haberi Güncelle </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

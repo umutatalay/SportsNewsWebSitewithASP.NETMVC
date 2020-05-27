@@ -1,0 +1,173 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminLayout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="~/Style/StyleSheet1.css" rel="stylesheet" />
+    <script src="~/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+    <div class="container-fluid" style="margin-left:-30px;">
+        <div class="row">
+            <div class="col-md-12 d-flex">
+                <div class="col-md-4">
+                    <div style="position:fixed">
+                        <table class="table table-dark" style="width:110%">
+                            <thead>
+                                <tr>
+                                    <td style="margin-left:10px;"> <img src="~/Pictures/logoapt.fw.png" alt="Alternate Text" /> </td>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/yazaradi.png" alt="Alternate Text" <h6><strong> Profil </strong> </h6>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/nesppp.fw.png" alt="Alternate Text" <h6><strong> <a style="color:white" href="/Admin/HaberListele"> Haberleri Listele</a></strong> </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/4848pen..fw.png" alt="Alternate Text" <h6><strong> <a style="color:white" href="/Admin/HaberEkle"> Haber Yaz</a> </strong> </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/4848update.fw.png" alt="Alternate Text" <h6><strong> <a style="color:white" href="/Admin/HaberListele"> Haber Güncelle</a></strong> </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/4848silgi.fw.png" alt="Alternate Text" <h6><strong> <a style="color:white" href="/Admin/HaberListele"> Haber Sil</a> </strong> </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/icons8-import-48.png" alt="Alternate Text" <h6><strong><a style="color:white" href="/Admin/KategoriEkle"> Kategori Ekle </a></strong> </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/icons8-available-updates-48.png" alt="Alternate Text" <h6><strong> <a style="color:white" href="/Admin/KategoriIslemleri">Kategori Sil / Güncelle</a>  </strong> </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" style="width:48px;height:48px;" src="~/Pictures/people.png" alt="Alternate Text"<h6><strong> <a style="color:white" href="/Admin/YazarEkle">Yazar Ekle</a> </strong> </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img id="navbarboyut" src="~/Pictures/kacis.fw.png" alt="Alternate Text"<h6><strong> <a style="color:white" href="/Anasayfa/Index">Çıkış</a> </strong> </h6>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                @*<div class="col-md-4">
+                        <div class="sidenav">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <td style="margin-left:10px;"> <img src="~/Pictures/logoapt.fw.png" alt="Alternate Text" /> </td>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        <img id="navbarboyut" src="~/Pictures/yazaradi.png" alt="Alternate Text" <h6><strong> Profil </strong> </h6>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <button class="dropdown-btn table table-dark border-0">
+                                            <img id="navbarboyut" src="~/Pictures/nesppp.fw.png" style="text-align:left" alt="Alternate Text" <h6><strong style="text-align:left"> Haberleri Görüntüle</strong> </h6>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <div class="dropdown-container">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="dropdown-btn table table-dark border-0">
+                                            <img id="navbarboyut" src="~/Pictures/nesppp.fw.png" style="text-align:left" alt="Alternate Text" <h6><strong style="text-align:left"> Haberleri Görüntüle</strong> </h6>
+                                            <i class="fa fa-caret-down"></i>
+                                        </div>
+                                        <div class="dropdown-container">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#about">About</a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#about">About</a>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>*@
+                <div class="col-md-8">
+                    @RenderBody();
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/ckeditor/ckeditor.js"></script>
+    @RenderSection("scripts", required: false)
+
+  
+</body>
+</html>

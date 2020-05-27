@@ -1,0 +1,16 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Haber>
+
+    
+
+        @foreach (var hbr in Model)
+        {
+            
+        <div class="carousel-item active">
+            <img style="border-radius:1%" src="@hbr.HaberGorsel" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+               <a href="~/Futbol/Haber/@hbr.HaberID"><h5 style="color:white"><strong>@hbr.HaberBaslik</strong></h5></a>
+            </div>
+        </div>
+        }
+

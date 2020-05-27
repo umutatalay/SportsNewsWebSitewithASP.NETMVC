@@ -1,0 +1,46 @@
+﻿@model USportsNews.Models.Entity.Tbl_Kategori
+
+@{
+    ViewBag.Title = "KategoriGuncelle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Kategori Güncelle</h2>
+
+@using (Html.BeginForm("KGuncelle", "Admin", FormMethod.Post))
+{
+
+    <table class="table table-borderless table-bordered table-dark">
+        <tr>
+
+            <td>
+                @Html.LabelFor(m => m.KategoriID)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.KategoriID, new { @readonly = "readonly" }) 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.KategoriAdi)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.KategoriAdi)
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <div>
+                    <button class="btn btn-outline-danger"> Güncelle </button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+}

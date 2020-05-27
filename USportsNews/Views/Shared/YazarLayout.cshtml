@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminLayout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="~/Style/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" style="margin-left:-20px;">
+                    <table class="table table-dark" style="width:60%">
+                        <thead>
+                            <tr>
+                                <td style="margin-left:10px;"> <img src="~/Pictures/logoapt.fw.png" alt="Alternate Text" /> </td>
+                            </tr>
+                        </thead>
+
+                        <tr>
+                            <td>
+                                <img id="navbarboyut" src="~/Pictures/yazaradi.png" alt="Alternate Text" <h6><strong> Profil </strong> </h6>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img id="navbarboyut" src="~/Pictures/nesppp.fw.png" alt="Alternate Text" <h6><strong> Haberlerini Görüntüle</strong> </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img id="navbarboyut" src="~/Pictures/4848pen..fw.png" alt="Alternate Text" <h6><strong>  Haber Yaz </strong> </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img id="navbarboyut" src="~/Pictures/4848update.fw.png" alt="Alternate Text" <h6><strong> Haberini Güncelle </strong> </h6>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <img id="navbarboyut" src="~/Pictures/kacis.fw.png" alt="Alternate Text" />  Çıkış Yap
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-8">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/ckeditor/ckeditor.js"></script>
+    @RenderSection("scripts", required: false)
+    
+</body>
+</html>

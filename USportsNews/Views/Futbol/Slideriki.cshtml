@@ -1,0 +1,19 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Haber>
+
+
+@foreach (var item in Model)
+{
+    <div class="card bg-dark text-white">
+        <img src="@item.HaberGorsel" class="card-img align-self-center" alt="...">
+        <div class="card-img-overlay">
+            <div id="textfotoustua" class="align-bottom">
+
+                <h5 class="card-title bottom-left" style="margin-top:100px;"><strong style="background-color: hsla(221, 0%, 50%, 0.6)"> <a style="color:white" href="~/Futbol/Haber/@item.HaberID">@item.HaberBaslik</a> </strong></h5>
+
+            </div>
+        </div>
+
+    </div>
+    <br />
+}

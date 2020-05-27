@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+    <div class="mt-1">
+        <br />
+        <h1 style="border-bottom: 6px solid red;background-color:grey"> <strong style="color:white"> Voleybol </strong> </h1>
+    </div>
+    <div class="container">
+        
+        <div class="row">
+
+            @Html.Action("HaberleriListele")
+        </div>
+    </div>

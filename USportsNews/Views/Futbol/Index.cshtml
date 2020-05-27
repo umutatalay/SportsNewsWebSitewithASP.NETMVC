@@ -1,0 +1,349 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+    <br />
+<br />
+    <div id="ustkutu">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-12 d-flex">
+                   @Html.Action("Sliderbir")
+                    <div class="col-md-4">
+                        @Html.Action("Slideriki")
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div id="ortakutu">
+        <div class="container mt-2 mx-auto" style="border:none;">
+            <div class="row">
+                <div class="col-md-12 d-flex">
+                    <div class="col-md-8">
+                        <div class="card bg-dark text-white">
+                            <img id="fotokırpma" src="~/Pictures/ds.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div id="textfotoustu" class="align-bottom">
+                                    <p style="margin-top:-150px;" class="card-text mb-4"><strong style="background-color: hsla(0, 100%, 50%, 0.6)">Atletico Madrid'de maaş indirimi </strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card bg-dark text-white">
+                            <img id="katsagkutuboy" src="~/Pictures/falcao.jpg" class="h-125 card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div id="textfotoustu" class="align-bottom">
+
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-dark mt-5 text-white">
+                            <img id="katsagkutuboy" src="~/Pictures/falcao.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div id="textfotoustu" class="align-bottom">
+
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card bg-dark text-white">
+                            <img id="katsagkutuboy" src="~/Pictures/falcao.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div id="textfotoustu" class="align-bottom">
+
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-dark mt-5 text-white">
+                            <img id="katsagkutuboy" src="~/Pictures/merihdemiral.jpg" class="card-img align-self-center" alt="...">
+                            <div class="card-img-overlay">
+                                <div id="textfotoustu" class="align-bottom">
+
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <div id="altkutu">
+        <div class="container mt-3">
+            <div>
+                <div class="col-md-12 d-flex">
+                    @Html.Action("Slideruc")   
+                    
+                    @Html.Action("OrtaKartlar")
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="enalt">
+        <div class="container d-flex mt-3">
+            <div class="row">
+                <div class="col-md-12 d-flex">
+                    <div class="col-md-4">
+                        
+                            @Html.Action("SolHaberler")
+                       
+                    </div>
+                    <div class="col-md-4">
+                        @Html.Action("SagHaberler")
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center border-0">
+                            <div class="card-header">
+                                <h4 style="color:chocolate;font-family:sans-serif">Puan Durumu</h4>
+                                <ul class="nav nav-tabs card-header-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Süper Lig</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">La Liga</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bundesliga</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+
+                            <table class="table table-borderless thead-light " style="font-size:52%">
+
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th>TAKIM</th>
+                                        <th>O</th>
+                                        <th>G</th>
+                                        <th>B</th>
+                                        <th>M</th>
+                                        <th>A</th>
+                                        <th>P</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tr class="table-primary">
+                                    <td>1.</td>
+                                    <td><img src="~/Pictures/trabzonspor.gif" style="width:12px;height:12px" alt="" /></td>
+                                    <td>Trabzonspor</td>
+                                    <td>26</td>
+                                    <td>15</td>
+                                    <td>8</td>
+                                    <td>31</td>
+                                    <td>53</td>
+                                    <td><strong>53</strong></td>
+                                </tr>
+                                <tr class="table-info">
+                                    <td>2.</td>
+                                    <td><img src="~/Pictures/istanbul-basaksehir.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>M.Başakşehir</td>
+                                    <td>26</td>
+                                    <td>15</td>
+                                    <td>8</td>
+                                    <td>25</td>
+                                    <td>25</td>
+                                    <td><strong>53</strong></td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td>3.</td>
+                                    <td><img src="~/Pictures/galatasaray.png" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Galatasaray</td>
+                                    <td>26</td>
+                                    <td>14</td>
+                                    <td>8</td>
+                                    <td>4</td>
+                                    <td>50</td>
+                                    <td><strong>50</strong></td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td>4.</td>
+                                    <td><img src="~/Pictures/sivasspor.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Sivasspor</td>
+                                    <td>26</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>49</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td><img src="~/Pictures/besiktas.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Beşiktaş</td>
+                                    <td>26</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>44</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>6.</td>
+                                    <td><img src="~/Pictures/alanyaspor.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>A.Alanyaspor</td>
+                                    <td>26</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>43</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>7.</td>
+                                    <td><img src="~/Pictures/fenerbahce.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Fenerbahçe</td>
+                                    <td>26</td>
+                                    <td>11</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>30</td>
+                                    <td><strong>40</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>8.</td>
+                                    <td><img src="~/Pictures/goztepe-s-k.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Göztepe</td>
+                                    <td>26</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>32</td>
+                                    <td><strong>37</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>9.</td>
+                                    <td><img src="~/Pictures/gaziantep.png" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Gaziantep</td>
+                                    <td>26</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>32</td>
+                                    <td><strong>32</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>10.</td>
+                                    <td><img src="~/Pictures/denizlispor.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Denizlispor</td>
+                                    <td>26</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>3</td>
+                                    <td><strong>31</strong></td>
+                                </tr>
+
+                                <tr>
+                                    <td>11.</td>
+                                    <td><img src="~/Pictures/galatasaray.png" style="width:10px;height:10px" alt="" /></td>
+                                    <td> Antalyaspor</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>30</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>12.</td>
+                                    <td><img src="~/Pictures/genclerbirligi.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Gençlerbirliği</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>22</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>13.</td>
+                                    <td><img src="~/Pictures/kasimpasa.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Kasımpaşa</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>30</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>14.</td>
+                                    <td><img src="~/Pictures/konyaspor.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>İH Konyaspor</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>26</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>15.</td>
+                                    <td><img src="~/Pictures/yeni-malatyaspor.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Y.Malatyaspor</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>25</strong></td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td>16.</td>
+                                    <td><img src="~/Pictures/caykur-rizespor.png" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Ç.Rizespor</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>25</strong></td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td>17.</td>
+                                    <td><img src="~/Pictures/ankaragucu.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Ankaragücü</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>23</strong></td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td>18.</td>
+                                    <td><img src="~/Pictures/kayserispor.gif" style="width:10px;height:10px" alt="" /></td>
+                                    <td>Kayserispor</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                    <td><strong>22</strong></td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   

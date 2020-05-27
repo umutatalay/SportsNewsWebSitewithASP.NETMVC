@@ -1,0 +1,137 @@
+<div id="teamlist">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span style="width:70px;height:70px;margin:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/galatasaray.png" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/fenerbahce.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/besiktas.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/trabzonspor.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/alanyaspor.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/antalyaspor.png" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/caykur-rizespor.png" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/denizlispor.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/gaziantep.png" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/genclerbirligi.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/goztepe-s-k.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/istanbul-basaksehir.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/kasimpasa.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/kayserispor.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/konyaspor.gif" alt="Alternate Text" />
+                </span>
+                <span style="width:70px;height:70px;margin-left:auto">
+                    <img class="zoom" id="team_icon" src="~/Pictures/sivasspor.gif" alt="Alternate Text" />
+                </span>
+            </div>
+
+
+
+        </div>
+
+        <div class="container mt-5">
+            <div class="card mt-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/alanyaspor.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/ankaragucu.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/antalyaspor.png" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/besiktas.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/caykur-rizespor.png" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/denizlispor.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/fenerbahce.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/galatasaray.png" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/gaziantep.png" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/genclerbirligi.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/goztepe-s-k.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/istanbul-basaksehir.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/kasimpasa.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/besiktas.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/kayserispor.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/konyaspor.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/sivasspor.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/trabzonspor.gif" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/yeni-malatyaspor.gif " /></a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

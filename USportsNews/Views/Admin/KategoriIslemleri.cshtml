@@ -1,0 +1,41 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Kategori>
+
+@{
+    ViewBag.Title = "KategoriIslemleri";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>KategoriIslemleri</h2>
+<table class="table table-bordered table-dark">
+    <tr>
+        <th>
+            Kategori ID
+        </th>
+        <th>
+            Kategori Adi
+        </th>
+        <th></th>
+
+    </tr>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <th>
+                    @k.KategoriID
+                </th>
+                <td>
+                    @k.KategoriAdi
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="/Admin/KategoriSil/@k.KategoriID"> SİL </a>
+                </td>
+                <td>
+                    <a class="btn btn-success" href="/Admin/KategoriGuncelle/@k.KategoriID"> Güncelle </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

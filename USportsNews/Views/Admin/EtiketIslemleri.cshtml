@@ -1,0 +1,42 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Tag>
+@{
+    ViewBag.Title = "EtiketIslemleri";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>EtiketIslemleri</h2>
+
+
+<table class="table table-bordered table-dark">
+    <tr>
+        <th>
+            Kategori ID
+        </th>
+        <th>
+            Kategori Adi
+        </th>
+        <th></th>
+
+    </tr>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <th>
+                    @k.TagID
+                </th>
+                <td>
+                    @k.TagAdi
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="/Admin/EtiketSil/@k.TagID"> SİL </a>
+                </td>
+                <td>
+                    <a class="btn btn-success" href="/Admin/EtiketGuncelle/@k.TagID"> Güncelle </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

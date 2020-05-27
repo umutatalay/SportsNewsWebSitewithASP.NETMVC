@@ -1,0 +1,37 @@
+﻿@model USportsNews.Models.Entity.Tbl_Yazar
+@{
+    ViewBag.Title = "AdminPanel";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Hoşgeldiniz</h2>
+@* Girişi başarılı oluduğunun analşılması için bir uyarı *@
+<script>
+    alert(" Hoşgeldiniz. @ViewBag.isim @ViewBag.Soyisim")
+</script>
+
+
+
+
+<table>
+    @* Bu kısımdaki ViewBaglar Controller kısmından geliyor.
+        Önceki kısımnda önce profilin id si bulunup bilgeri elde edilmişti daha sonra ViewBag ile buraya gönderildi.
+    *@
+    <tr>
+        <td> Ad </td>
+        <td> @ViewBag.isim </td>
+    </tr>
+    <tr>
+        <td> Soyadi</td>
+        <td> @ViewBag.Soyisim </td>
+    </tr>
+    <tr>
+        <td> E-posta</td>
+        <td> @ViewBag.eposta  </td>
+    </tr>
+    <tr>
+        <td> Telefon Numarası </td>
+        <td> @ViewBag.telefon</td>
+    </tr>
+</table>
+

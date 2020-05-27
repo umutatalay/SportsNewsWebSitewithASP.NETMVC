@@ -1,0 +1,194 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>UmutHaber</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="~/Style/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body style="background-color:#EAEAEA">
+    <div>
+        <nav class="navbar fixed-top navbar navbar-expand-lg navbar-light bg-danger">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8 ml-2">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li>
+                                    <img src="~/Pictures/logom.fw.png" style="max-height:34px" alt="Logo" />
+                                </li>
+                                @*<li class="nav-item dropdown">
+                                        <a href="/AnaSayfa/Index"><h3> <strong style="color:white;position:center">Sports </strong></h3></a>
+                                    </li>
+                                    <li class="nav-item dropdown mr-4">
+                                        <h3> <strong style="background-color:green;color:white">  U </strong></h3>
+                                    </li>*@
+
+                            <li class="nav-item">
+                                <a class="nav-link ml-3" href="~/Futbol/Index"><strong style="color:white"> FUTBOL </strong></a>
+
+                            </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="~/Basketbol/Index"><strong style="color:white">BASKETBOL</strong></a>
+                                        
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="~/Voleybol/Index"><strong style="color:white">VOLEYBOL</strong></a>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="~/DHaberler/Index"><strong style="color:white">DİĞERSPORLAR</strong></a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+    <div class="container-fluid d-flex">
+        @Html.Action("HaberAltı")
+        <br />
+    </div>
+</body>
+</html>
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: black">
+        <div class="container">
+
+            <div class="row py-4 d-flex align-items-center">
+
+
+                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                    <img src="~/Pictures/tambeyazlogo.fw.png" style="max-height:40px;" alt="Alternate Text" />
+                </div>
+
+                <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                    <img src="~/Pictures/twitter.png" alt="Alternate Text" />
+                    <img src="~/Pictures/instagram.png" alt="Alternate Text" />
+                    <img src="~/Pictures/youtube.png" alt="Alternate Text" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left mt-5">
+
+        <div class="row mt-3">
+
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                <h6 class="text-uppercase font-weight-bold">U SPORTS</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+
+                    Sitemiz güncel spor haberlerini size anında ulaştırır. Kaynak göstermeden haberlerimizi almayınız.
+                    <br />
+
+                </p>
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <h6 class="text-uppercase font-weight-bold">Kategoriler</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">Futbol</a>
+                </p>
+                <p>
+                    <a href="#!">Basketbol</a>
+                </p>
+                <p>
+                    <a href="#!">Voleybol</a>
+                </p>
+                <p>
+                    <a href="#!">Tüm Sporlar </a>
+                </p>
+
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <h6 class="text-uppercase font-weight-bold">_</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">EURO 2020</a>
+                </p>
+                <p>
+                    <a href="#!">Şampiyonlar Ligi </a>
+                </p>
+                <p>
+                    <a href="#!">UEFA Avrupa Ligi</a>
+                </p>
+                <p>
+                    <a href="#!">THY EuroL</a>
+                </p>
+
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <h6 class="text-uppercase font-weight-bold">İletişim</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fas fa-home mr-3"></i> Bakırköy, ISTANBUL , <strong>TÜRKİYE</strong>
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> Umutatalayumut@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> + 90 554 XXX XX XX
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div style="background-color: black">
+        <div class="container-fluid">
+
+            <div class="row d-flex align-items-center">
+
+
+                <div class="footer-copyright py-2 text-center ml-5" style="text-align:center;">
+                    <p style="color:white">
+                        <strong style="margin-left:480px"> © 2020 Copyright: Umut Atalay //</strong>
+                        <a style="color:white;text-align:center" href="#"> <strong>USPORTS 2020</strong> </a>
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</footer>

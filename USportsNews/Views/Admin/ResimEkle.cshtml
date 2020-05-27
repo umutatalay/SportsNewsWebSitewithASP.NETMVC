@@ -1,0 +1,18 @@
+﻿@model USportsNews.Models.Entity.Tbl_Haber
+
+@{
+    ViewBag.Title = "ResimEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Yeni Kayıt Ekle</h2>
+@using (Html.BeginForm("ResimEkle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <p>Kullanıcı Adı</p>
+    @Html.TextBoxFor(a => a.HaberBaslik)
+    <p>Kullanıcı Soyad</p>
+    @Html.TextBoxFor(a => a.HaberOzet)
+    <p>Resim Ekle</p>
+    <input type="file" name=”HaberGorsel” accept="Pictures/*" />
+    <input type="submit" value=”Ekle” />
+}

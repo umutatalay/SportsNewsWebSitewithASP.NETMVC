@@ -1,0 +1,24 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Haber>
+
+    <div class="container">
+        <div class="row">
+
+            @foreach (var haber in Model)
+            {
+                <div class="col-md-4">
+                    <div id="img-hover-zoom img-hover-zoom--basic" class="photo">
+                        <img class="mt-3" src="@haber.HaberGorsel" alt="Norway" style="width:100%;">
+                    </div>
+                </div>
+                <div class="col-md-8 mt-3">
+                    <strong>
+                        <a style="color:black" href="~/Dhaberler/Haber/@haber.HaberID"> @haber.HaberBaslik </a>
+                    </strong>
+                </div>
+            }
+
+
+
+        </div>
+    </div>

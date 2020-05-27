@@ -1,0 +1,53 @@
+﻿@model USportsNews.Models.Entity.Tbl_Haber
+@{
+    ViewBag.Title = "Takımlar";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@*Hangi haberin listeleneceğinin anlaşılması için Form kullanıldı .*@
+
+@using (Html.BeginForm("TakimHabeler", "AnaSayfa", FormMethod.Post))
+{
+
+    <table class="table table-borderless table-bordered table-dark mt-4">
+
+
+        <tr>
+            <td> <h1> <strong> @Model.HaberBaslik </strong>  </h1></td>
+        </tr>
+
+        <tr>
+            <td style="opacity:0.5">
+                Haber Tarihi : <strong> @Model.HaberTarih </strong>
+                <br />
+                <strong> | FUTBOL </strong>
+                <br />
+
+                Yazar : @Model.Tbl_Yazar.YazarAdi  @Model.Tbl_Yazar.YazarSoyadi
+            </td>
+
+        </tr>
+        <tr>
+            <td> @Model.HaberOzet</td>
+        </tr>
+        <tr>
+            <td style="text-align:center"> <img src="@Model.HaberGorsel" alt="Alternate Text" /></td>
+        </tr>
+        <tr>
+
+            <td>
+                @MvcHtmlString.Create(HttpUtility.HtmlDecode(Model.HaberIcerik)) @*HTML kod çözücü, veri tabanında html dilinde tutulan dili çevirir.*@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Etiket Bulutu
+                @Model.Etiket
+            </td>
+        </tr>
+    </table>
+
+
+
+    //substring(0,45) kısaltmak için

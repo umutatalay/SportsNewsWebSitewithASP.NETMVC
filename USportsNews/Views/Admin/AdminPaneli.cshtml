@@ -1,0 +1,64 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Yazar>
+
+@{
+    ViewBag.Title = "AdminPaneli";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+    <h2>AdminPaneli</h2>
+    <h2>AdminPaneli</h2>
+    <h2>AdminPaneli</h2>
+    <h2>AdminPaneli</h2>
+
+
+<script> alert("SELAM ADMİN YADA YAZAR BİR ŞEY PANALİNE WELCOME Hİ OLAHA DOBRAYA UTRO GUTTEN MORGEN "); </script>
+    <table>
+        <tr>
+            <th>YazarID</th>
+            <th>YazarAdi</th>
+        </tr>
+        <tbody>
+            @foreach(var yzr in Model)
+            {
+                <tr>
+                    <td>
+                        @yzr.YazarAdi
+                    </td>
+                    <td>
+                        @yzr.YazarParola
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+<div class="container">
+    <table>
+        <tr>
+            <td> E-Posta </td>
+            <td> <input type="text" name="epostatxt" value="" /></td>
+        </tr>
+        <tr>
+            <td> Parola </td>
+            <td> <input type="text" name="parolatxt" value="" /></td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btngiris">Giriş Yap</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<a href="/Admin/Kontrol">content</a>
+<form runat="server">
+    <div>
+        vsdsds
+    </div>
+</form>
+<div class="container">
+    
+</div>
+
+

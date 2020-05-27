@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="USportsNewsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Haber">
+    <Key>
+      <PropertyRef Name="HaberID" />
+    </Key>
+    <Property Name="HaberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriID" Type="Int32" />
+    <Property Name="HaberBaslik" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="HaberOzet" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="HaberIcerik" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="HaberGorsel" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="YazarID" Type="Int32" />
+    <Property Name="HaberTarih" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Tbl_Kategori" Relationship="Self.FK_Tbl_Haber_Tbl_Kategori" FromRole="Tbl_Haber" ToRole="Tbl_Kategori" />
+    <NavigationProperty Name="Tbl_Yazar" Relationship="Self.FK_Tbl_Haber_Tbl_Yazar" FromRole="Tbl_Haber" ToRole="Tbl_Yazar" />
+    <Property Name="Slider" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tbl_Admin" Relationship="USportsNewsModel.FK_Tbl_Admin_Tbl_Haber1" FromRole="Tbl_Haber" ToRole="Tbl_Admin" />
+    <Property Name="Etiket" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Kategori">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tbl_Haber" Relationship="Self.FK_Tbl_Haber_Tbl_Kategori" FromRole="Tbl_Kategori" ToRole="Tbl_Haber" />
+  </EntityType>
+  <EntityType Name="Tbl_Tag">
+    <Key>
+      <PropertyRef Name="TagID" />
+    </Key>
+    <Property Name="TagID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TagAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Yazar">
+    <Key>
+      <PropertyRef Name="YazarID" />
+    </Key>
+    <Property Name="YazarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YazarAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="YazarSoyadi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="YazarEposta" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="YazarTel" Type="String" MaxLength="28" FixedLength="false" Unicode="true" />
+    <Property Name="YazarParola" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tbl_Haber" Relationship="Self.FK_Tbl_Haber_Tbl_Yazar" FromRole="Tbl_Yazar" ToRole="Tbl_Haber" />
+  </EntityType>
+  <Association Name="FK_Tbl_Haber_Tbl_Kategori">
+    <End Role="Tbl_Kategori" Type="Self.Tbl_Kategori" Multiplicity="0..1" />
+    <End Role="Tbl_Haber" Type="Self.Tbl_Haber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Kategori">
+        <PropertyRef Name="KategoriID" />
+      </Principal>
+      <Dependent Role="Tbl_Haber">
+        <PropertyRef Name="KategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tbl_Haber_Tbl_Yazar">
+    <End Role="Tbl_Yazar" Type="Self.Tbl_Yazar" Multiplicity="0..1" />
+    <End Role="Tbl_Haber" Type="Self.Tbl_Haber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Yazar">
+        <PropertyRef Name="YazarID" />
+      </Principal>
+      <Dependent Role="Tbl_Haber">
+        <PropertyRef Name="YazarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="USportsNewsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Tbl_Haber" EntityType="Self.Tbl_Haber" />
+    <EntitySet Name="Tbl_Kategori" EntityType="Self.Tbl_Kategori" />
+    <EntitySet Name="Tbl_Tag" EntityType="Self.Tbl_Tag" />
+    <EntitySet Name="Tbl_Yazar" EntityType="Self.Tbl_Yazar" />
+    <AssociationSet Name="FK_Tbl_Haber_Tbl_Kategori" Association="Self.FK_Tbl_Haber_Tbl_Kategori">
+      <End Role="Tbl_Kategori" EntitySet="Tbl_Kategori" />
+      <End Role="Tbl_Haber" EntitySet="Tbl_Haber" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tbl_Haber_Tbl_Yazar" Association="Self.FK_Tbl_Haber_Tbl_Yazar">
+      <End Role="Tbl_Yazar" EntitySet="Tbl_Yazar" />
+      <End Role="Tbl_Haber" EntitySet="Tbl_Haber" />
+    </AssociationSet>
+    <EntitySet Name="Tbl_Admin" EntityType="USportsNewsModel.Tbl_Admin" />
+    <AssociationSet Name="FK_Tbl_Admin_Tbl_Haber1" Association="USportsNewsModel.FK_Tbl_Admin_Tbl_Haber1">
+      <End Role="Tbl_Haber" EntitySet="Tbl_Haber" />
+      <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Tbl_Admin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" />
+    <Property Name="AdminAdi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AdminSoyadi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AdminEposta" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AdminParola" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AdminTelNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="HaberID" Type="Int32" />
+    <NavigationProperty Name="Tbl_Haber" Relationship="USportsNewsModel.FK_Tbl_Admin_Tbl_Haber1" FromRole="Tbl_Admin" ToRole="Tbl_Haber" />
+  </EntityType>
+  <Association Name="FK_Tbl_Admin_Tbl_Haber1">
+    <End Type="USportsNewsModel.Tbl_Haber" Role="Tbl_Haber" Multiplicity="0..1" />
+    <End Type="USportsNewsModel.Tbl_Admin" Role="Tbl_Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Haber">
+        <PropertyRef Name="HaberID" />
+      </Principal>
+      <Dependent Role="Tbl_Admin">
+        <PropertyRef Name="HaberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

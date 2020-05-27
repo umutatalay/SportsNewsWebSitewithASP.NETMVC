@@ -1,0 +1,83 @@
+﻿@model USportsNews.Models.Entity.Tbl_Haber
+@{
+    ViewBag.Title = "HaberiGuncelle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>HaberiGuncelle</h2>
+
+
+@using (Html.BeginForm("HGuncelle", "Admin", FormMethod.Post))
+{
+<table class="table table-borderless table-bordered table-dark">
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.HaberID)
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.HaberID)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.HaberBaslik)
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.HaberBaslik)
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.HaberOzet)
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.HaberOzet)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.HaberGorsel)
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.HaberGorsel)
+        </td>
+
+    </tr>
+    <tr>
+
+
+        <td>
+            @Html.LabelFor(m => m.HaberIcerik)
+        </td>
+
+        <td>
+
+            @Html.TextAreaFor(m => m.HaberIcerik, new { @id = "YeniHaberIcerik", @name = "HaberIcerik" })
+            <script>
+                CKEDITOR.replace("YeniHaberIcerik");
+            </script>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.LabelFor(m => m.KategoriID)
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.KategoriID)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+        </td>
+        <td>
+            <div>
+                <button class="btn btn-outline-danger"> Güncelle </button>
+            </div>
+        </td>
+    </tr>
+</table>
+
+}

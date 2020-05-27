@@ -1,0 +1,396 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Haber>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="container">
+    <div class="row mt-5 d-flex">
+        <div class="col-md-8 mt-3 mb-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+
+                    @Html.Action("Slider")
+                  @Html.Action("Slideriki")
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="container">
+                @Html.Action("SagSlider")
+                @Html.Action("SagSlideralt")
+            </div>
+        </div>
+    </div>
+</div>
+<div id="teamlist">
+
+    <div class="container mb-4">
+        <div class="card border-0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card border-0">
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a href="~/Takimlar/Alanyaspor"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/alanyaspor.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Ankaragucu"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/ankaragucu.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Antalyaspor"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/antalyaspor.png" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Beşiktaş"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/besiktas.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Rize"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/caykur-rizespor.png" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Denizli"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/denizlispor.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Fenerbahçe"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/fenerbahce.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Galatasaray"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/galatasaray.png" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Gaziantep"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/gaziantep.png" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Genclerbirligi"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/genclerbirligi.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Goztepe"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/goztepe-s-k.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Basaksehir"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/istanbul-basaksehir.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Kasimpasa"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/kasimpasa.gif" /></a>
+                                    </td>
+                                    
+                                    <td>
+                                        <a href="~/Takimlar/Kayseri"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/kayserispor.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/konyaspor"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/konyaspor.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Sivasspor"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/sivasspor.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Trabzonspor"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/trabzonspor.gif" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="~/Takimlar/Malatya"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/yeni-malatyaspor.gif " /></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            
+
+            @Html.Action("OrtakSol")
+        </div>
+
+        <div class="col-md-4">
+            @Html.Action("OrtakSag")
+            
+        </div>
+
+        <div class="col-md-4">
+            <h1 style="border-bottom: 6px solid red;background-color:grey;margin-top:-3px"> <strong style="color:white">PUAN DURUMU</strong> </h1>
+            <div id="puandurumu" style="margin-top:-3px">
+
+                <table class="table table-borderless thead-light " style="font-size:52%">
+
+                    <thead class="thead-dark">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>TAKIM</th>
+                            <th>O</th>
+                            <th>G</th>
+                            <th>B</th>
+                            <th>M</th>
+                            <th>A</th>
+                            <th>P</th>
+
+                        </tr>
+                    </thead>
+
+                    <tr class="table-primary">
+                        <td>1.</td>
+                        <td><img src="~/Pictures/trabzonspor.gif" style="width:12px;height:12px" alt="" /></td>
+                        <td>Trabzonspor</td>
+                        <td>26</td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td>31</td>
+                        <td>53</td>
+                        <td><strong>53</strong></td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>2.</td>
+                        <td><img src="~/Pictures/istanbul-basaksehir.gif" style="width:10px;height:10px" alt="" /></td>
+                        <td>M.Başakşehir</td>
+                        <td>26</td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td><strong>53</strong></td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>3.</td>
+                        <td><img src="~/Pictures/galatasaray.png" style="width:10px;height:10px" alt="" /></td>
+                        <td>Galatasaray</td>
+                        <td>26</td>
+                        <td>14</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>50</td>
+                        <td><strong>50</strong></td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>4.</td>
+                        <td><img src="~/Pictures/sivasspor.gif" style="width:10px;height:10px" alt="" /></td>
+                        <td>DG Sivasspor</td>
+                        <td>26</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td><strong>49</strong></td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td><img src="~/Pictures/besiktas.gif" style="width:10px;height:10px" alt="" /></td>
+                        <td>Beşiktaş</td>
+                        <td>26</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td><strong>44</strong></td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td><img src="~/Pictures/alanyaspor.gif" style="width:10px;height:10px" alt="" /></td>
+                        <td>A.Alanyaspor</td>
+                        <td>26</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td><strong>43</strong></td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td><img src="~/Pictures/fenerbahce.gif" style="width:10px;height:10px" alt="" /></td>
+                        <td>Fenerbahçe</td>
+                        <td>26</td>
+                        <td>11</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>30</td>
+                        <td><strong>40</strong></td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td><img src="~/Pictures/goztepe-s-k.gif" style="width:10px;height:10px" alt="" /></td>
+                        <td>Göztepe</td>
+                        <td>26</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>32</td>
+                        <td><strong>37</strong></td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td><img src="~/Pictures/gaziantep.png" style="width:10px;height:10px" alt="" /></td>
+                        <td>Gaziantep</td>
+                        <td>26</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>32</td>
+                        <td><strong>32</strong></td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td><img src="~/Pictures/denizlispor.gif" style="width:10px;height:10px" alt="" /></td>
+                        <td>Denizlispor</td>
+                        <td>26</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>3</td>
+                        <td><strong>31</strong></td>
+                    </tr>
+               
+
+                </table>
+                <h4> <a href="#">STSL DETAYLI PUAN DURUMU</a></h4>
+            </div>
+            <div id="turnuvalar">
+                <div class="container mb-4 mt-3 mr-5">
+                    <div class="card border-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card border-0">
+                                    <div>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <a href="~/Takimlar/SampiyonlarLigi"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/ueafacl.png" /></a>
+                                                </td>
+                                                <td>
+                                                    <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/Europa_League.svg.png" /></a>
+                                                </td>
+                                                <td>
+                                                    <a href="#"><img class="card-img-top zoom img-fluid rounded-0 w-75" src="~/Pictures/UEFA_Euro_2020_Logo.svg.png" /></a>
+                                                </td>
+                                                <td>
+                                                    <a href="~/Takimlar/Olimpiyat"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/olimpiyat.png" /></a>
+                                                </td>
+                                                <td>
+                                                    <a href="#"><img class="card-img-top zoom img-fluid rounded-0" src="~/Pictures/450px-Turkish_Airlines_EuroLeague.svg.png" /></a>
+                                                </td>
+
+                                            </tr>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sonhaberler">
+                <h1 style="border-bottom: 6px solid red;background-color:grey"> <strong style="color:white">Son Haberler</strong> </h1>
+
+                @Html.Action("SonEklenenHaberler","AnaSayfa")
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="futbolbaslik">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card text-white px-5" style="background-color:#469D55;">
+                    <img class="card-img " src="~/Pictures/hfdeneme.fw.png" alt="Futbol">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"></h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="futbol">
+    <div class="container mt-5">
+        <div class="row mt-5">
+            
+            @Html.Action("FutbolUst")
+        </div>
+        <div class="row mt-3">
+            @Html.Action("FutbolAlt")
+        </div>
+    </div>
+</div>
+<div id="basketbolbaslik">
+    <div class="container p-0 mt-5 ">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="card text-white" style="background-color:#F0A714">
+                    <img class="card-img" src="~/Pictures/basketbolyenibaslik.fw.png" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"></h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="basketbol">
+    <div class="container mt-5">
+        <div class="row mt-5">
+            @Html.Action("Basketbolust")
+        </div>
+        <div class="row mt-3">
+            @Html.Action("Basketbolalt")
+        </div>
+    </div>
+</div>
+<div id="digersporlarbaslik">
+    <div class="container p-0 mt-5">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card text-white" style="background-color:#004BFB">
+                    <img class="card-img" src="~/Pictures/digersporlarbaslik.fw.png" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"></h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="digersporlar">
+    <div class="container mt-5">
+        <div class="row mt-5">
+            @Html.Action("DigerSporlarUst")
+        </div>
+        <div class="row mt-3">
+            @Html.Action("DigerSporlarAlt")
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,34 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Haber>
+@{
+    ViewBag.Title = "Rize";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1> <img src="~/Pictures/caykur-rizespor.png" alt="Takimlogo Text" /> Çaykur Rizespor </h1>
+            @foreach (var item in Model)
+            {
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="@item.HaberGorsel" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><a style="color:black" href="~/@item.Tbl_Kategori.KategoriAdi/Haber/@item.HaberID">@item.HaberBaslik</a></h5>
+                                <p class="card-text">@item.HaberOzet</p>
+                                <p class="card-text"><small class="text-muted">@item.HaberTarih</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Yazar>
+
+@{
+    ViewBag.Title = "Giris";
+    Layout = "~/Views/Shared/Bos.cshtml";
+}
+
+<h2> Yazar Girişi </h2>
+
+
+<script>
+    alert("Eposta adresi : umutatalayumut@gmail.com ve sifreyi parola olarak giriniz.");
+</script>
+<br />
+<br />
+<br />
+<div class="container justify-content-center mx-auto">
+    @*@foreach (var k in Model)
+    {
+        <tr>
+            <th>
+                @k.KategoriID
+            </th>
+            <td>
+                @k.KategoriAdi
+            </td>
+            <td>
+                <a class="btn btn-danger" href="/Admin/KategoriSil/@k.KategoriID"> SİL </a>
+            </td>
+            <td>
+                <a class="btn btn-success" href="/Admin/KategoriGuncelle/@k.KategoriID"> Güncelle </a>
+            </td>
+        </tr>
+    }*@
+
+    <div class="col-md-6 ">
+        <div>
+
+            <form method="post">
+               
+                <table class="table table-bordered table-dark table-borderless">
+                    <tr>
+                        <td> <h1 style="font-family:sans-serif"> Yazar Girişi</h1> </td>
+                    </tr>
+                    <tr>
+
+                        <td>  E-Posta Adresi <input type="text" name="eposta" value="E-Posta Adresi" class="form-control" /></td>
+                    </tr>
+                    <tr>
+
+                        <td>  Parola  <input type="password" name="sifre" value="Sifre" class="form-control" /> </td>
+                    </tr>
+                    <tr>
+
+                        <td><button style="position:center" type="submit" class="btn btn-outline-danger">Giris Yap </button></td>
+
+                    </tr>
+                </table>
+
+
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

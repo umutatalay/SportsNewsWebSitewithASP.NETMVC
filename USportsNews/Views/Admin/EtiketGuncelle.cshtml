@@ -1,0 +1,45 @@
+﻿@model USportsNews.Models.Entity.Tbl_Tag
+@{
+    ViewBag.Title = "EtiketGuncelle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>EtiketGuncelle</h2>
+
+
+@using (Html.BeginForm("EGuncelle", "Admin", FormMethod.Post))
+{
+
+    <table class="table table-borderless table-bordered table-dark">
+        <tr>
+
+            <td>
+                @Html.LabelFor(m => m.TagID)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.TagID)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.TagAdi)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.TagAdi)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <div>
+                    <button class="btn btn-outline-danger"> Güncelle </button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+}

@@ -1,0 +1,42 @@
+﻿@using USportsNews.Models.Entity
+@model List<Tbl_Haber>
+@{
+    ViewBag.Title = "YazarHaberListele";
+    Layout = "~/Views/Shared/YazarLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        Filtreleme bu kısımda olacak.
+    </div>
+</div>
+
+<table class="table table-bordered table-dark">
+    <tr>
+        <th>
+            Haber Baslık
+        </th>
+        <th>
+            Haber Kategori
+        </th>
+    </tr>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <th>
+                    @k.HaberBaslik
+                </th>
+                <td>
+                    @k.KategoriID
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="/Yazar/HaberSil/@k.HaberID"> Haberi Sil </a>
+                </td>
+                <td>
+                    <a class="btn btn-success" href="/Yazar/HaberiGuncelle/@k.HaberID"> Haberi Güncelle </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
