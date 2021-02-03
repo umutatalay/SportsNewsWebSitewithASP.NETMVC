@@ -7,6 +7,8 @@ Bu proje ASP.NET MVC ile hazırlanmıştır.
 
 Projenin amacı yöneticilerin eklediği haberlerin siteyi ziyaret eden kullanıcılar ile buluşturulmasıdır.
 
+Bu proje DB first prensipleri ile yapılmıştır.
+
 # Projede kullanılan teknolojiler
 
 	HTML
