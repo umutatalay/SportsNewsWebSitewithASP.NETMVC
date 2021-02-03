@@ -5,8 +5,10 @@
 # ASP.NET MVC ile Spor Haberleri sitesi
 
 Bu proje ASP.NET MVC ile hazırlanmıştır.
+
 Projenin amacı yöneticilerin eklediği haberlerin siteyi ziyaret eden kullanıcılar ile buluşturulmasıdır.
-Projede kullanılan teknolojiler
+
+# Projede kullanılan teknolojiler
 
 	HTML
 
@@ -28,6 +30,7 @@ Projede kullanılan teknolojiler
 
 ![image](https://user-images.githubusercontent.com/56643124/83140371-a478ca80-a0f6-11ea-8201-c2015ff26290.png)
 
+# Yönetim Paneli 
 
 ![image](https://user-images.githubusercontent.com/56643124/83140312-8e6b0a00-a0f6-11ea-95a7-ba145e3963aa.png)
 
@@ -39,4 +42,3 @@ Projede kullanılan teknolojiler
 
 ![image](https://user-images.githubusercontent.com/56643124/83140419-b9555e00-a0f6-11ea-995c-15bca623e3ff.png)
 
-![image](https://user-images.githubusercontent.com/56643124/83140433-beb2a880-a0f6-11ea-8722-4da073fbda32.png)
