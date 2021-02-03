@@ -7,12 +7,19 @@
 Bu proje ASP.NET MVC ile hazırlanmıştır.
 Projenin amacı yöneticilerin eklediği haberlerin siteyi ziyaret eden kullanıcılar ile buluşturulmasıdır.
 Projede kullanılan teknolojiler
+
 	HTML
+
 	CSS
+
 	Bootstrap 4
+
 	MSSQL
+
 	JavaScript 
+
 	Asp.NET MVC
+
 	Linq sorguları
 
 
