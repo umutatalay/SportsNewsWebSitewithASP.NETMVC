@@ -1,6 +1,5 @@
 # SportsNewsWebSitewithASP.NETMVC
-
-<center> ![image](https://user-images.githubusercontent.com/56643124/83140228-68456a00-a0f6-11ea-8328-131319f49adc.png) </center>
+![image](https://user-images.githubusercontent.com/56643124/83140228-68456a00-a0f6-11ea-8328-131319f49adc.png)
 
 # ASP.NET MVC ile Spor Haberleri sitesi
 
